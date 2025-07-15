@@ -21,8 +21,16 @@ function stopGameMusic() {
     }
 }
 
-// Call playGameMusic() when the game starts
+// Function to play the start sound effect
+function playStartSound() {
+    const startSound = new Audio('assets/game-start-6104.mp3');
+    startSound.volume = 1.0;
+    startSound.play();
+}
+
+// Call playStartSound() at the start of startGame()
 function startGame() {
+    playStartSound();
     // ...existing code...
     playGameMusic();
     // ...existing code...
