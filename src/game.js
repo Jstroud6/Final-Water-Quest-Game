@@ -4,10 +4,9 @@ let gameMusic;
 // Function to start music loop
 function playGameMusic() {
     if (!gameMusic) {
-        gameMusic = new Audio('game-music-loop-6-144641.mp3'); // Corrected path
-
+        gameMusic = new Audio('src/sounds/game-music-loop-6-144641.mp3');
         gameMusic.loop = true;
-        gameMusic.volume = 1.0; // Volume must be between 0.0 and 1.0
+        gameMusic.volume = 1.0;
     }
     gameMusic.currentTime = 0;
     gameMusic.play();
@@ -15,7 +14,7 @@ function playGameMusic() {
 
 // Function to stop music
 function stopGameMusic() {
-    if (gameMusic) {
+    if (gameMusic) {src/sounds/game-music-loop-6-144641.mp3}
         gameMusic.pause();
         gameMusic.currentTime = 0;
     }
@@ -23,7 +22,7 @@ function stopGameMusic() {
 
 // Function to play the start sound effect
 function playStartSound() {
-    const startSound = new Audio('assets/game-start-6104.mp3');
+    const startSound = new Audio('src/sounds/game-start-6104.mp3');
     startSound.volume = 1.0;
     startSound.play();
 }
